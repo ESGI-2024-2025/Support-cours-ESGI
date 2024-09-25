@@ -26,3 +26,18 @@ def generateDice():
 dice = generateDice()
 
 # dice prend la valeur de la fonction, donc du return de la fonction !
+
+def generate_certain_dice(nombre_de_des):
+
+    des = []
+    for i in range(0,nombre_de_des):
+        generated_dice = generateDice()
+        des.append(generated_dice)
+
+    return des
+
+liste_1 = generate_certain_dice(3)
+liste_2 = generate_certain_dice(10)
+liste_3 = generate_certain_dice(300)
+
+print(liste_1, liste_2, liste_3)

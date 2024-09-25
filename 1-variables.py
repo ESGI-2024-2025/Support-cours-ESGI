@@ -6,7 +6,7 @@ nom = "Léo"     # String
 homme = True    # Booléen
 
 # Ma présentation
-print("Bonjour, je m'appelle" , nom , ", j'ai" , age , "ans, mon IMC est" , imc , "et suis je un homme ?" , homme)
+print("Bonjour, je m'appelle " + nom + ", j'ai" , age , "ans, mon IMC est" , imc , "et suis je un homme ?" , homme)
 
 # C'est mon anniversaire !
 age = age + 1   # J'incrémente mon age !

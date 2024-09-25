@@ -1,6 +1,6 @@
 
 # On demande à l'utilisateur son âge
-age = input("Quel est ton âge ?")
+age = input("Quel est ton âge ? ")
 
 # Or, age est un str (string), on le convertit en int (integer)
 age = int(age)
@@ -16,7 +16,14 @@ else:
     print("Vous êtes un adulte.")
 
 # On specifie un sexe
-homme = True
+homme = input("Etes vous un homme ? ")
+
+if homme == "oui":
+    homme = True
+elif homme == "non":
+    homme = False
+else:
+    print("J'ai pas compris ta réponse")
 
 # Verifions les stats attribuées au sexe à la naissance...
 if homme:

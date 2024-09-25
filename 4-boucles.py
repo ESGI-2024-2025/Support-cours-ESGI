@@ -1,13 +1,12 @@
 
-
-from random import randint
+import random
 
 def generateDice():
-    return randint(1,6)
+    return random.randint(1,6)
 
 # ...mais comment vérifier si l'utilisateur rentre bien un chiffre, avant de le convertir en entier...
 # ...sinon... !
-int("18")
+int("chocolat")
 # Erreur !
 
 # ...donc tant que l'utilisateur ne rentre pas une valeur autorisée, on redemande...
@@ -28,7 +27,7 @@ dices = [generateDice(), generateDice(), generateDice(), generateDice(), generat
 
 # On declare i, qui va de 0 et 7 dans le contexte de la boucle
 for i in range(0,8):
-    print(dices[i])
+    print("position",i,":",dices[i])
 
 # ...ou alors, on peut déclarer une variable qui va "interer" sur la liste, donc prendre tour après tour les valeurs de la liste
 for de in dices:

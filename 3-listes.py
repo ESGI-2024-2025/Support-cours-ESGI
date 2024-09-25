@@ -10,6 +10,11 @@ def generateDice():
 de1 = generateDice()
 de2 = generateDice()
 de3 = generateDice()
+de4 = generateDice()
+de5 = generateDice()
+de6 = generateDice()
+de7 = generateDice()
+de8 = generateDice()
 
 # ...on peut tout mettre sur une seule variable, avec des listes
 des = [generateDice(), generateDice(), generateDice(), generateDice(), generateDice(), generateDice(), generateDice(), generateDice()]
