@@ -18,8 +18,8 @@ print(a)
 # Pourquoi a obtient une valeur ? Car il recupere la valeur sur input. Mais comment assigner une valeur sur l'appel d'une fonction ?
 # Avec un return !
 # Pour génerer un dé, revenons là dessus...
-def generateDice():
-    return randint(1,6)
+def generateDice(valeur_min,valeur_max):
+    return randint(valeur_min,valeur_max)
 
 # On voit que generate a un return : il prend la valeur qui est en face
 # ...donc...
@@ -27,17 +27,17 @@ dice = generateDice()
 
 # dice prend la valeur de la fonction, donc du return de la fonction !
 
-def generate_certain_dice(nombre_de_des):
+def generate_certain_dice(nombre_de_des,valeur_min,valeur_max):
 
     des = []
     for i in range(0,nombre_de_des):
-        generated_dice = generateDice()
+        generated_dice = generateDice(valeur_min,valeur_max)
         des.append(generated_dice)
 
     return des
 
-liste_1 = generate_certain_dice(3)
-liste_2 = generate_certain_dice(10)
-liste_3 = generate_certain_dice(300)
+liste_1 = generate_certain_dice(3,1,20)
+liste_2 = generate_certain_dice(10,1,6)
+liste_3 = generate_certain_dice(300,1,100)
 
 print(liste_1, liste_2, liste_3)

@@ -17,6 +17,19 @@ is_a_number = text.isdigit() # ici, cela verifie si l'instance str text est un e
 
 """
 
-CETTE SECTION SERA REMPLIE
+CETTE SECTION SERA REMPLIE !!!
 
 """
+
+class Eleve:
+
+    def __init__(self,nom, age, classe) -> None:
+        self.nom = nom
+        self.age = age
+        self.classe = classe
+
+    def get_classe(self):
+        return self.classe
+
+mael = Eleve("Mael",17,"ESGI 1")
+print(mael.get_classe())
