@@ -15,21 +15,30 @@ is_a_number = text.isdigit() # ici, cela verifie si l'instance str text est un e
 
 # etc...
 
-"""
+# créons notre première classe
+# par exemple, un système pour gérer une promotion
 
-CETTE SECTION SERA REMPLIE !!!
 
-"""
+# on va vouloir créer des promos...
+class Promotion:
 
+    def __init__(self, ecole, annee) -> None: # cette fonction sera appelée lors de la création d'une nouvelle instance de la classe
+        self.ecole = ecole # ceci sont des attributs, des variables liées à une instance
+        self.annee = annee
+
+# ainsi que des eleves...
 class Eleve:
 
-    def __init__(self,nom, age, classe) -> None:
+    def __init__(self,nom, age, promotion) -> None:
         self.nom = nom
         self.age = age
-        self.classe = classe
+        self.promotion = promotion
 
-    def get_classe(self):
-        return self.classe
+    def get_promotion_name(self): # ceci est une méthode (fonction dans une classe), elle est accessible en faisant <instance>.get_promotion_name()
+        return self.promotion.ecole + " " + str(self.promotion.annee) # self fait reference a l'instance en cours, pour acceder à ses attributs ou methodes
+    
 
-mael = Eleve("Mael",17,"ESGI 1")
-print(mael.get_classe())
+esgi_1er_annee = Promotion("ESGI",1) # on créé une instance de Promotion, celle de la première année de l'ESGI
+mael = Eleve("Maël",17,esgi_1er_annee) # ici, on créé un élève, Mael, 17 ans, qui fait parti de la promotion créée précédemment
+
+print(mael.get_promotion_name()) # on affiche le nom de la promotion de Maël grâce à la méthode qui fait parti de la classe Eleve
